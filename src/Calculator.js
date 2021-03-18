@@ -18,7 +18,9 @@ class Calculator extends React.Component  {
       this.state={
          loanvalue: "",
          sliderValue: '5',
-         interestValue: '0.00'
+         interestValue: '0.00',
+         left: '-5%'
+        
        
       }
       this.handleLoaninput=this.handleLoaninput.bind(this);
@@ -31,7 +33,8 @@ handleLoaninput(loanvalue){
   this.setState({loanvalue})
 }
 handlesliderValue(sliderValue){
-   this.setState({ sliderValue})
+   this.setState({sliderValue})
+
 }
 handleInterestchange(interestValue){
    this.setState({interestValue})
@@ -39,7 +42,7 @@ handleInterestchange(interestValue){
 
 
 render(){
-  const{sliderValue,loanvalue,interestValue}=this.state
+  const{sliderValue,loanvalue,interestValue,left}=this.state
 
   
 
@@ -69,13 +72,11 @@ render(){
             onSliderChange = {this.handlesliderValue}
             label="Your loan term is for"
             sliderValue={sliderValue} 
+            left={left}
             />
-            
             <Interest interestRate={this.handleInterestchange}/>
-             {/* <Repayment /> */}
-             <Result 
-             emi={emi}
-             />
+            
+            <Result emi={emi}/>
            
             <Footer />
             
