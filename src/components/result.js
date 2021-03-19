@@ -4,18 +4,24 @@ import React from 'react';
 const  Result =({emi})=>{
     
 
-
   return(
-         <div className="result">
          
-           <p className="result-details"> Your Monthly Repayments are <br/>${ emi ? Math.round(emi) : 0 }</p>
+      <div className="result">
+         
+        <p className="result-details"> Your Monthly Repayments are<br />
+        <em style={emi? {color: '#28242B'} :{color: '$text-color'}}>${ emi ? Math.round(emi) : 0 }</em></p>
         
+       </div>
            
            
+  )
+}
+    
+export default Result;
 
-         </div>
-       )
 
+
+          
 
 
 
@@ -23,10 +29,6 @@ const  Result =({emi})=>{
            
     
       
-}
-      
-export default Result;
-           
          
              
             
