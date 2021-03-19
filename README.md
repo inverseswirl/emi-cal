@@ -1,11 +1,11 @@
-# Getting Started with Create React App
+Home Loan EMI Calculator
+<hr >
+Hello there! 😊 👋🏻 
+Hope you are doing good!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## This is a simple Home Loan EMI Calculator that I created using React Library.
 
-Hello there!
-
-## This is a simple Home Loan EMI Calculator created using React framework.
 
 
 
