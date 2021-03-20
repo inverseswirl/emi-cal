@@ -6,7 +6,7 @@ Hello there! 😊 👋🏻
 Hope you are doing good!
 <br>
 <h3>This is a Home Loan EMI Calculator that I created using React Library.</h3>
-<h4>This will help you to figure out the monthly instalments on your home loan.</h4>
+<h4>This will help you to figure out monthly instalments on your home loan.</h4>
 
 
 
