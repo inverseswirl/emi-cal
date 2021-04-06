@@ -101,9 +101,9 @@ body {
     @include justify(column);
     align-items: center;
     box-shadow: 1px 1px 5px  #2a2a2a;
-    width: 32%;
+    width: 32.25%;
     margin: 0 5% 1% 40%;
-    border-radius: 4px;
+    border-radius: 2px;
     background: $bg-color;
     position: relative;
     z-index: 2;
@@ -181,11 +181,11 @@ body {
 
   
 .slider-container{
-    width: 30%;
+    width: 30.25%;
     margin: 0 4% 1% 40%;
     box-shadow: 1px 1px 5px  #2a2a2a;
     padding: 0 0 0 25px;
-    border-radius: 4px;
+    border-radius: 2px;
     background: $bg-color;
     grid-row:3;
     position: relative;
@@ -214,7 +214,7 @@ body {
 
   .slider {
     -webkit-appearance: none;
-    width: 90%;
+    width: 89%;
     height: 2px;
     appearance: none;
     outline:none;
@@ -283,10 +283,10 @@ body {
   @include justify(row);
   align-items: center;
   box-shadow: 1px 1px 5px  #2a2a2a;
-  width: 32%;
+  width: 31.9%;
   margin:0 5% 1% 40%;
   padding: 6px 0 6px 0;
-  border-radius: 4px;
+  border-radius: 2px;
   font-family: $font;
   color: $text-color;
   position: relative;
@@ -346,7 +346,7 @@ body {
   box-shadow: 1px 1px 6px  #2a2a2a;
   width: 32%;
   margin: 0 5% 1% 40%;
-  border-radius: 4px;
+  border-radius: 2px;
   background: $bg-color;
   position: relative;
   z-index: 2;
@@ -506,6 +506,11 @@ left: 66.8%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 63%);
     border-radius:4px;
   }
+
+
+  @media (max-width: 600px){
+    display: none;
+  }
 }
 
 
@@ -516,13 +521,13 @@ left: 66.8%;
     width: 53%;
   }
   .slider-container{
-    width: 49.6%;
+    width: 49.8%;
   }
   .interest{
     width: 53%;
   }
   .result{
-    width:53%;
+    width:52.9%;
   }
   .house{
     width: 50%;
@@ -534,25 +539,28 @@ left: 66.8%;
 
 
 
-@media only screen and (max-width: 570px){
+@media only screen and (max-width: 600px){
 
   .bank-section{
     width: 60%;
     margin:auto;
-
+    background-color: rgb(253, 250, 231);
   }
   .slider-container{
     width: 52%;
     margin:auto;
     padding: 4%;
+    background-color: rgb(253, 250, 231);
   }
   .interest{
     width: 60%;
     margin:auto;
+    background-color: rgb(253, 250, 231);
   }
   .result{
     width: 60%;
     margin:auto;
+    background-color: rgb(253, 250, 231);
   }
   .house{
     width: 15%;
@@ -563,16 +571,20 @@ left: 66.8%;
   }
   .heading-title{
     margin-top: 2px;
-    text-decoration: underline;
+    text-decoration: none;
+
   }
   .main-grid{
 
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.7fr;
+    grid-template-rows: 1fr 0.65fr 1fr 0.75fr 0.5fr 0.7fr;
     position: relative;
-    background-color: white;
+    background: linear-gradient(100deg,rgb(171, 212, 171),rgb(251, 191, 185));
+    margin: 1%;
+    border-radius: 23px;
   }
+  
 }
 
  
