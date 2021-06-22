@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  border: none;
+}
+
+/* general styling....................... */
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1.5fr 0.85fr 1fr 1fr 0.75fr 0.5fr;
+      grid-template-rows: 1.5fr 0.85fr 1fr 1fr 0.75fr 0.5fr;
+  position: relative;
+  background-color: white;
+}
+
+/* title section......................... */
+.heading {
+  margin-top: 2vh;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  z-index: 2;
+}
+
+.heading-title {
+  color: #6e6d6e;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 0 10px 10px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid goldenrod;
+}
+
+.cash-icon {
+  color: #ffb266;
+  opacity: 0.8;
+  font-size: size(larger);
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  margin-top: 20px;
+  -ms-grid-column: 5;
+  grid-column: 5;
+}
+
+/* bank section .........................*/
+.bank-section {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 1px 5px  #2a2a2a;
+          box-shadow: 1px 1px 5px  #2a2a2a;
+  width: 32.25%;
+  margin: 0 5% 1% 40%;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.bank-section .loan-amount-title {
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: #6e6d6e;
+  padding: 2px 2px 5px 2px;
+}
+
+.bank-section .loan-amount-title-icon {
+  color: #6d6c6c;
+  margin: 0px 10px -5px 5px;
+  font-size: 2rem;
+}
+
+.bank-section .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bank-section .input-dollar {
+  font-weight: 200;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: -5px;
+}
+
+.bank-section .input-style {
+  width: 120px;
+  border: none;
+  margin-left: 4px;
+  padding: 1px;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+  font-size: 1.3rem;
+  color: #626060;
+}
+
+/* loan years section.................. */
+.slider-container {
+  width: 30.25%;
+  margin: 0 4% 1% 40%;
+  -webkit-box-shadow: 1px 1px 5px  #2a2a2a;
+          box-shadow: 1px 1px 5px  #2a2a2a;
+  padding: 0 0 0 25px;
+  border-radius: 2px;
+  background: white;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  position: relative;
+  z-index: 2;
+}
+
+.slider-container .slider-label {
+  padding: 5px;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: #6e6d6e;
+  display: block;
+  font-weight: weight(bolder);
+}
+
+.slider-container .slider-label-icon {
+  color: #6d6c6c;
+  margin: 0px 10px -5px 5px;
+  font-size: 2rem;
+}
+
+.slider-container .slider {
+  -webkit-appearance: none;
+  width: 89%;
+  height: 2px;
+  -moz-appearance: none;
+       appearance: none;
+  outline: none;
+  background-color: #f0e7d3;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-perspective: 20em;
+          perspective: 20em;
+}
+
+.slider-container .slider:focus {
+  outline: none;
+}
+
+.slider-container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 10px;
+  height: 28px;
+  background-color: #a1a1a1;
+  margin: 0;
+  line-height: 0;
+  border-radius: 5px;
+  border: 1px solid #797979;
+  -webkit-box-shadow: 0px 2px 2px #363636;
+          box-shadow: 0px 2px 2px #363636;
+}
+
+.slider-container .slider-span {
+  line-height: normal;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.slider-container .slider-span::after {
+  content: "years";
+  display: block;
+  font-size: 12px;
+  font-weight: weight(normal);
+  margin-top: -3px;
+  padding: 0;
+}
+
+.interest {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 1px 5px  #2a2a2a;
+          box-shadow: 1px 1px 5px  #2a2a2a;
+  width: 31.9%;
+  margin: 0 5% 1% 40%;
+  padding: 6px 0 6px 0;
+  border-radius: 2px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #6e6d6e;
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+.interest-label {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  margin-left: 25px;
+}
+
+.interest-input {
+  border-radius: 4px;
+  border: 1px solid #6e6d6e;
+  margin-right: 0;
+  padding: 2px 1px 2px 1px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.3rem;
+  background: transparent;
+  color: black;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.interest-input::-webkit-outer-spin-button, .interest-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.interest-percent {
+  background: transparent;
+  margin: 5px 5px -4px 4px;
+  font-size: 1.7rem;
+  color: #6d6c6c;
+}
+
+.result {
+  -ms-grid-row: 5;
+  grid-row: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 1px 1px 6px  #2a2a2a;
+          box-shadow: 1px 1px 6px  #2a2a2a;
+  width: 32%;
+  margin: 0 5% 1% 40%;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.result-details {
+  color: #6e6d6e;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 12px 5px 10px 15px;
+}
+
+.result-icon {
+  color: grey;
+  font-size: 2.5rem;
+  margin: 2px 0px -12px 12px;
+}
+
+.footer {
+  -ms-grid-row: 6;
+  grid-row: 6;
+  text-align: center;
+  color: #6e6d6e;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer-icon {
+  margin: 0px 2px -2px 2px;
+  color: grey;
+}
+
+.house {
+  position: absolute;
+  width: 32%;
+  height: 75%;
+  z-index: 1;
+  top: 13%;
+  left: 20%;
+}
+
+.house-leftwall {
+  width: 2px;
+  height: 70%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1%, transparent), color-stop(30%, brown));
+  background-image: linear-gradient(transparent 0.1%, brown 30%);
+  position: absolute;
+  border-radius: 50% 50% 4px 4px;
+  top: 30%;
+}
+
+.house-rightwall {
+  width: 2px;
+  height: 70%;
+  top: 30%;
+  background-color: brown;
+  position: absolute;
+  left: 100%;
+  border-radius: 4px;
+}
+
+.house-bottomslab {
+  width: 33.33%;
+  height: 1px;
+  background-color: brown;
+  border-radius: 4px 4px 5px 5px;
+  position: absolute;
+  bottom: 0%;
+}
+
+.house-bottomslab2 {
+  width: 33%;
+  height: 2.5%;
+  border-radius: 30px 30px 2% 2%;
+  border: 2px solid brown;
+  border-bottom: 0px;
+  position: absolute;
+  bottom: 0%;
+  left: 33.33%;
+}
+
+.house-bottomslab3 {
+  width: 33.33%;
+  height: 1px;
+  background-color: brown;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  bottom: 0%;
+  left: 66.8%;
+}
+
+.house-roof {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0%, 100% 30%, 50% 1.6%, 0% 30%);
+          clip-path: polygon(50% 0%, 100% 30%, 50% 1.6%, 0% 30%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1%, brown), color-stop(0.15%, transparent), color-stop(3%, brown));
+  background-image: linear-gradient(brown 0.1%, transparent 0.15%, brown 3%);
+}
+
+.house-chimney {
+  width: 7.5%;
+  height: 12.5%;
+  position: absolute;
+  left: 76.2%;
+  top: 8%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(2%, whitesmoke), color-stop(6%, goldenrod), color-stop(150%, whitesmoke));
+  background-image: linear-gradient(90deg, whitesmoke 2%, goldenrod 6%, whitesmoke 150%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 63%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 63%);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .house {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .bank-section {
+    width: 53%;
+  }
+  .slider-container {
+    width: 49.8%;
+  }
+  .interest {
+    width: 53%;
+  }
+  .result {
+    width: 52.9%;
+  }
+  .house {
+    width: 50%;
+    height: 76%;
+    top: 13%;
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bank-section {
+    width: 60%;
+    margin: auto;
+    background-color: #fdfae7;
+  }
+  .slider-container {
+    width: 52%;
+    margin: auto;
+    padding: 4%;
+    background-color: #fdfae7;
+  }
+  .interest {
+    width: 60%;
+    margin: auto;
+    background-color: #fdfae7;
+  }
+  .result {
+    width: 60%;
+    margin: auto;
+    background-color: #fdfae7;
+  }
+  .house {
+    width: 15%;
+    height: 10%;
+    top: 3%;
+    left: 4%;
+  }
+  .heading-title {
+    margin-top: 2px;
+    text-decoration: none;
+  }
+  .main-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 1fr 0.65fr 1fr 0.75fr 0.5fr 0.7fr;
+        grid-template-rows: 1fr 0.65fr 1fr 0.75fr 0.5fr 0.7fr;
+    position: relative;
+    background: linear-gradient(110deg, #b9dbb9, salmon) repeat-y;
+  }
+  .interest-percent {
+    margin: 5px 7px -4px 4px;
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=App.css.map */
