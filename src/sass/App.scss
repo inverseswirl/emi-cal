@@ -44,6 +44,9 @@ body {
   background-size: 100% 100%;
   
 
+   @media (max-width:475px){
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+   }
 }
 
   
@@ -119,12 +122,20 @@ body {
       @include center;
       color: $text-color;
       padding: 2px 2px 5px 2px;
+
+      @media (max-width:475px){
+        font-size:1rem;
+        padding: 6px 2px 5px 2px;
+      }
     
 
       &-icon{
         color: rgb(109, 108, 108);
         margin: 0px 10px -5px 5px;
         font-size: $sizebig;
+        @media (max-width:475px){
+          font-size:1.1rem;
+        }
       }
       
     }
@@ -140,8 +151,11 @@ body {
       font-weight: 200;
       font-size: 1.5rem;
       font-weight: 400;
-      // margin:0;
       margin-top:-5px;
+      @media (max-width:475px){
+        font-size:1rem;
+      }
+      
      }
    
    &-style{
@@ -154,8 +168,12 @@ body {
      font-family: $font;
      font-weight: 100;
      font-size: 1.3rem;
-     
      color: $input-color;
+     @media (max-width:475px){
+      font-size:1.1rem;
+      margin-left: 5px;
+      color: black;
+    }
    }
   
   }
@@ -204,11 +222,18 @@ body {
     color: $text-color;
     display: block;
     font-weight: weight(bolder);
+    @media (max-width:475px){
+      font-size:1rem;
+    }
+   
     
     &-icon{
       color: rgb(109, 108, 108);
       margin: 0px 10px -5px 5px;
       font-size: $sizebig;
+      @media (max-width:475px){
+        font-size:1.1rem;
+      }
     }
   }
   
@@ -259,9 +284,9 @@ body {
     position: relative;
     display: block;
     margin-bottom: 0px;
-    
    
-    // transform-origin: center center;
+   
+  
   }
 
   .slider-span::after{
@@ -271,6 +296,8 @@ body {
     font-weight: weight(normal);
     margin-top: -3px;
     padding:0;
+
+  
   }
 
 }
@@ -301,6 +328,10 @@ body {
      font-size: $sizenormal;
      margin-right: 10px;
      margin-left: 25px;
+     @media (max-width:475px){
+      font-size:1rem;
+      padding-top: 5px;
+    }
     }
     
     &-input{
@@ -316,7 +347,9 @@ body {
        color: black;
        font-family:$font;
        
-      //  text-decoration: underline dotted rgb(240, 231, 211);
+       @media (max-width:475px){
+        font-size:1.1rem;
+      }
     }
      
      
@@ -358,6 +391,9 @@ body {
     font-family: $font;
     font-size: $sizenormal;
     padding:12px 5px 10px 15px;
+    @media (max-width:475px){
+      font-size:1rem;
+    }
 
    
   }
@@ -552,21 +588,24 @@ left: 66.8%;
   .bank-section{
     width: 60%;
     margin:auto;
+    padding:1.5%;
+    
   }
 
   .slider-container{
-    width: 52%;
+    width: 55%;
     margin:auto;
     padding: 4%;
   }
   .interest{
-    width: 60%;
+    width: 58.5%;
     margin:auto;
+    padding: 2%;
   }
   .result{
-    width: 60%;
+    width: 58%;
     margin:auto;
-  
+    padding:2%;
   }
   .house{
     width: 15%;
@@ -624,7 +663,6 @@ left: 66.8%;
 
  
  
-
 
 
 
