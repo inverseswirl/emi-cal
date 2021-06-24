@@ -14,6 +14,7 @@ body {
 }
 
 .main-grid {
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
@@ -21,7 +22,15 @@ body {
   -ms-grid-rows: 1.5fr 0.85fr 1fr 1fr 0.75fr 0.5fr;
       grid-template-rows: 1.5fr 0.85fr 1fr 1fr 0.75fr 0.5fr;
   position: relative;
-  background-color: white;
+  background-image: linear-gradient(180deg, whitesmoke, transparent), linear-gradient(70deg, whitesmoke, transparent), url("../img/emibackground.jpeg");
+  background-size: 100% 100%;
+}
+
+@media (max-width: 475px) {
+  .main-grid {
+    -ms-grid-rows: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  }
 }
 
 /* title section......................... */
@@ -38,10 +47,9 @@ body {
   color: #6e6d6e;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
-  padding: 0 10px 10px 30px;
+  padding: 10px 10px 10px 30px;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 1px solid goldenrod;
 }
 
 .cash-icon {
@@ -90,10 +98,23 @@ body {
   padding: 2px 2px 5px 2px;
 }
 
+@media (max-width: 475px) {
+  .bank-section .loan-amount-title {
+    font-size: 1rem;
+    padding: 6px 2px 5px 2px;
+  }
+}
+
 .bank-section .loan-amount-title-icon {
   color: #6d6c6c;
   margin: 0px 10px -5px 5px;
   font-size: 2rem;
+}
+
+@media (max-width: 475px) {
+  .bank-section .loan-amount-title-icon {
+    font-size: 1.1rem;
+  }
 }
 
 .bank-section .input {
@@ -119,6 +140,12 @@ body {
   margin-top: -5px;
 }
 
+@media (max-width: 475px) {
+  .bank-section .input-dollar {
+    font-size: 1rem;
+  }
+}
+
 .bank-section .input-style {
   width: 120px;
   border: none;
@@ -129,6 +156,14 @@ body {
   font-weight: 100;
   font-size: 1.3rem;
   color: #626060;
+}
+
+@media (max-width: 475px) {
+  .bank-section .input-style {
+    font-size: 1.1rem;
+    margin-left: 5px;
+    color: black;
+  }
 }
 
 /* loan years section.................. */
@@ -156,10 +191,22 @@ body {
   font-weight: weight(bolder);
 }
 
+@media (max-width: 475px) {
+  .slider-container .slider-label {
+    font-size: 1rem;
+  }
+}
+
 .slider-container .slider-label-icon {
   color: #6d6c6c;
   margin: 0px 10px -5px 5px;
   font-size: 2rem;
+}
+
+@media (max-width: 475px) {
+  .slider-container .slider-label-icon {
+    font-size: 1.1rem;
+  }
 }
 
 .slider-container .slider {
@@ -251,6 +298,13 @@ body {
   margin-left: 25px;
 }
 
+@media (max-width: 475px) {
+  .interest-label {
+    font-size: 1rem;
+    padding-top: 5px;
+  }
+}
+
 .interest-input {
   border-radius: 4px;
   border: 1px solid #6e6d6e;
@@ -265,6 +319,12 @@ body {
   background: transparent;
   color: black;
   font-family: "Josefin Sans", sans-serif;
+}
+
+@media (max-width: 475px) {
+  .interest-input {
+    font-size: 1.1rem;
+  }
 }
 
 .interest-input::-webkit-outer-spin-button, .interest-input::-webkit-inner-spin-button {
@@ -310,6 +370,12 @@ body {
   padding: 12px 5px 10px 15px;
 }
 
+@media (max-width: 475px) {
+  .result-details {
+    font-size: 1rem;
+  }
+}
+
 .result-icon {
   color: grey;
   font-size: 2.5rem;
@@ -331,6 +397,12 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media (max-width: 475px) {
+  .footer {
+    padding-bottom: 10px;
+  }
 }
 
 .footer-icon {
@@ -451,24 +523,23 @@ body {
 @media only screen and (max-width: 600px) {
   .bank-section {
     width: 60%;
-    margin: auto;
-    background-color: #fdfae7;
+    margin: 5px auto;
+    padding: 1.5%;
   }
   .slider-container {
-    width: 52%;
-    margin: auto;
+    width: 55%;
+    margin: 5px auto;
     padding: 4%;
-    background-color: #fdfae7;
   }
   .interest {
-    width: 60%;
-    margin: auto;
-    background-color: #fdfae7;
+    width: 58.5%;
+    margin: 5px auto;
+    padding: 2%;
   }
   .result {
-    width: 60%;
-    margin: auto;
-    background-color: #fdfae7;
+    width: 58%;
+    margin: 5px auto;
+    padding: 2%;
   }
   .house {
     width: 15%;
@@ -479,6 +550,8 @@ body {
   .heading-title {
     margin-top: 2px;
     text-decoration: none;
+    color: #aa662b;
+    font-size: 16px;
   }
   .main-grid {
     display: -ms-grid;
@@ -488,7 +561,9 @@ body {
     -ms-grid-rows: 1fr 0.65fr 1fr 0.75fr 0.5fr 0.7fr;
         grid-template-rows: 1fr 0.65fr 1fr 0.75fr 0.5fr 0.7fr;
     position: relative;
-    background: linear-gradient(110deg, #b9dbb9, salmon) repeat-y;
+    background-image: url("../img/emibackground.jpeg");
+    background-size: 200% 100%;
+    background-position: 100% 0%;
   }
   .interest-percent {
     margin: 5px 7px -4px 4px;
